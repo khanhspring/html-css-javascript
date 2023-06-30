@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: aquamarine;
+        }
+        .popup.hide {
+            display: none;
+        }
+        .popup-outline {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .popup-outline.hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- khi click vào button Click me thì open popup -->
+    <button onclick="openPopup()">Click me</button>
+
+    <div class="popup-outline hide"></div>
+    <div class="popup hide" id="helloPopup">
+        <h2>Hello world</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        <!-- Tìm đến phần tử có class là popup-outline và popup để xóa class hide đi  -->
+        function openPopup() {
+            // var -> let, const
+            const popup = document.getElementById("helloPopup");
+            popup.classList.remove('hide');
+            const popupOutline = document.getElementsByClassName("popup-outline")[0];
+            popupOutline.classList.remove('hide');
+        }
+
+        function closePopup() {
+            const popup = document.getElementsByClassName("popup")[0];
+            popup.classList.add('hide');
+            const popupOutline = document.getElementsByClassName("popup-outline")[0];
+            popupOutline.classList.add('hide');
+        }
+    </script>
+</body>
+</html>
