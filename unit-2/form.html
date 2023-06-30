@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link href="styles/normalize.css" rel="stylesheet"/>
+    <link href="styles/form.css" rel="stylesheet"/>
+    <script src="js/form-validation.js"></script>
+</head>
+<body>
+    <main>
+        <section class="student-form">
+            <h2 class="student-form__title">Student info</h2>
+            <form class="form" action="http://localhost/test-form" name="studentForm" onsubmit="return validateForm()">
+                <div class="form__item" id="studentIdFormItem">
+                    <label for="studentId">Student ID</label>
+                    <input class="form__control" maxlength="10" id="studentId" name="studentId"/>
+                </div>
+                <div class="form__item">
+                    <label for="firstName">First name</label>
+                    <input class="form__control" maxlength="100" id="firstName" name="firstName"/>
+                </div>
+                <div class="form__item">
+                    <label for="lastName">Last name</label>
+                    <input class="form__control" maxlength="100" id="lastName" name="lastName"/>
+                </div>
+                <div class="form__item">
+                    <label for="gender">Gender</label>
+                    <select class="form__control" name="gender" id="gender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label for="citizenId">Citizen ID No</label>
+                    <input class="form__control" maxlength="15" id="citizenId" name="citizenId"/>
+                </div>
+                <div class="form__item">
+                    <label for="notes">Notes</label>
+                    <textarea class="form__control" name="notes" id="notes"></textarea>
+                </div>
+                <div class="form__item form__action">
+                    <input class="form__button" type="submit"/>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
