@@ -11,13 +11,13 @@
 <body>
     <main>
         <section class="student-form">
-            <h2 class="student-form__title">Student info</h2>
-            <form class="form" action="http://localhost/test-form" name="studentForm" onsubmit="return validateForm()">
+            <h2 class="student-form__title">Thêm mới sinh viên</h2>
+            <form class="form" name="studentForm" onsubmit="return validateForm()">
                 <div class="form__item" id="studentIdFormItem">
                     <label for="studentId">Student ID</label>
                     <input class="form__control" maxlength="10" id="studentId" name="studentId"/>
                 </div>
-                <div class="form__item">
+                <div class="form__item" id="firstNameFormItem">
                     <label for="firstName">First name</label>
                     <input class="form__control" maxlength="100" id="firstName" name="firstName"/>
                 </div>

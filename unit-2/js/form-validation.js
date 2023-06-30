@@ -1,9 +1,18 @@
 function validateForm() {
     let studentId = document.forms["studentForm"]["studentId"].value;
+    console.log("studentId đã nhập là: " + studentId);
     if (studentId === "") {
-        showError("studentIdFormItem", "Student ID is required");
+        showError("studentIdFormItem", "Student ID là bắt buộc");
     } else {
         clearError("studentIdFormItem");
+    }
+
+    let firstName = document.forms["studentForm"]["firstName"].value;
+    console.log("firstName đã nhập là: " + firstName);
+    if (firstName === "") {
+        showError("firstNameFormItem", "Tên là bắt buộc");
+    } else {
+        clearError("firstNameFormItem");
     }
     return false;
 }
