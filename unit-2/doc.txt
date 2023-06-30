@@ -1,4 +1,4 @@
-HTML form validation with JS
+HTML form validation with Javascript
 
 1. HTML <form> elements
 
