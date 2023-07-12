@@ -6,7 +6,6 @@
     <title>Contact form</title>
     <link href="styles/normalize.css" rel="stylesheet"/>
     <link href="styles/form.css" rel="stylesheet"/>
-    <script src="js/form-validation.js"></script>
 </head>
 <body>
     <main>
@@ -15,7 +14,9 @@
             <form class="form" name="studentForm" onsubmit="return validateForm()">
                 <div class="form__item" id="studentIdFormItem">
                     <label for="studentId">Student ID</label>
-                    <input class="form__control" maxlength="10" id="studentId" name="studentId"/>
+                    <input
+                        class="form__control" maxlength="10" id="studentId" name="studentId"
+                    />
                 </div>
                 <div class="form__item" id="firstNameFormItem">
                     <label for="firstName">First name</label>
@@ -46,5 +47,6 @@
             </form>
         </section>
     </main>
+    <script src="js/form-validation.js"></script>
 </body>
 </html>

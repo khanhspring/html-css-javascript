@@ -33,13 +33,13 @@
 </head>
 <body>
     <!-- khi click vào button Click me thì open popup -->
-    <button onclick="openPopup()">Click me</button>
+    <button onclick="toggle()">Click me</button>
 
     <div class="popup-outline hide"></div>
     <div class="popup hide" id="helloPopup">
         <h2>Hello world</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <button onclick="closePopup()">Close</button>
+        <button onclick="toggle()">Close</button>
     </div>
 
     <script>
@@ -57,6 +57,15 @@
             popup.classList.add('hide');
             const popupOutline = document.getElementsByClassName("popup-outline")[0];
             popupOutline.classList.add('hide');
+        }
+
+        function toggle() {
+            const popup = document.getElementById("helloPopup");
+            if (popup.classList.contains('hide')) {
+                openPopup();
+            } else {
+                closePopup();
+            }
         }
     </script>
 </body>
