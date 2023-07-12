@@ -39,3 +39,12 @@ function clearError(formItemId) {
     const errorSpan = formItem.getElementsByClassName("form__error-message");
     formItem.removeChild(errorSpan[0]);
 }
+
+const onStudentIdChange = (e) => {
+    console.log(e);
+}
+
+const studentId = document.getElementById("studentId");
+studentId.addEventListener("change", function(e) {
+    console.log(e.target.value);
+})
